@@ -10,10 +10,14 @@ export const NewTodo: React.FC<NewTodoProps> = ({ onAddTodo }) => {
 
   const todoSubmitHandler = (event: React.FormEvent) => {
     event.preventDefault();
-    const enteredText = textInputRef.current!.value;
-
-    onAddTodo(enteredText);
-    textInputRef.current!.value = '';
+    if(textInputRef.current!.value !== '') {
+      const enteredText = textInputRef.current!.value;
+  
+      onAddTodo(enteredText);
+      textInputRef.current!.value = '';
+    } else {
+      alert('Invalid input');
+    }
   };
 
   return (
