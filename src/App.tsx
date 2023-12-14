@@ -9,7 +9,7 @@ function App() {
 
   const todoAddHandler = (text: string) => {
     // console.log(text);
-    setTodos([{id: Math.random().toString(), text}]);
+    setTodos(prevTodos => [...prevTodos, {id: Math.random().toString(), text}]);
   };
 
   return (
