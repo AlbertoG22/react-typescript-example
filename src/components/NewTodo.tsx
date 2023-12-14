@@ -1,5 +1,5 @@
-import React, { useRef } from "react";
-import "./NewTodo.css";
+import React, { useRef } from 'react';
+import './NewTodo.css';
 
 type NewTodoProps = {
   onAddTodo: (todoText: string) => void;
@@ -11,8 +11,9 @@ export const NewTodo: React.FC<NewTodoProps> = ({ onAddTodo }) => {
   const todoSubmitHandler = (event: React.FormEvent) => {
     event.preventDefault();
     const enteredText = textInputRef.current!.value;
-    // console.log(enteredText);
+
     onAddTodo(enteredText);
+    textInputRef.current!.value = '';
   };
 
   return (

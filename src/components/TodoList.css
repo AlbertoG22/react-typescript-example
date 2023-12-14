@@ -15,3 +15,21 @@ li {
   justify-content: space-between;
   align-items: center;
 }
+
+.delete-item {
+  background: #F40505;
+  border: 1px solid #F40505ed;
+  color: white;
+  padding: 0.5rem 1.5rem;
+  cursor: pointer;
+}
+
+.delete-item:focus {
+  outline: none;
+}
+
+.delete-item:hover,
+.delete-item:active {
+  background: #FF5C5C;
+  border-color: #FF5C5C;
+}

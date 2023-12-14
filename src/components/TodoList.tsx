@@ -13,7 +13,7 @@ export const TodoList: React.FC<TodoListProps> = ({ items, onDeleteTodo }) => {
         {items.map((todo) => (
           <li key={todo.id}>
             <span>{todo.text}</span>
-            <button onClick={() => onDeleteTodo(todo.id)}>Delete</button>
+            <button className='delete-item' onClick={() => onDeleteTodo(todo.id)}>Delete</button>
           </li>
         ))}
       </ul>
